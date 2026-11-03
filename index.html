@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>독서기록장 개인정보처리방침</title>
+<meta name="description" content="독서기록장(com.seohwanlab.readnest) 안드로이드 앱의 개인정보처리방침">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1f2328;
+    --muted: #59636e;
+    --line: #d1d9e0;
+    --accent: #2e7d32;
+    --table-head: #f6f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --muted: #9198a1;
+      --line: #3d444d;
+      --accent: #66bb6a;
+      --table-head: #151b23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 36px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 24px; }
+  a { color: var(--accent); }
+  ul { padding-left: 1.3em; }
+  li { margin: 4px 0; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 8px 0; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--table-head); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>독서기록장 개인정보처리방침</h1>
+  <p class="meta">시행일: 2026년 11월 3일 · 앱: 독서기록장(Android, com.seohwanlab.readnest)</p>
+
+  <p>SeohwanLab(이하 "개발자")은 「개인정보 보호법」 등 관련 법령을 준수하며, 독서기록장 앱(이하 "앱") 이용자의 개인정보를 소중히 다룹니다. 이 방침은 앱이 어떤 정보를 어떻게 수집·이용·보관하는지 설명합니다.</p>
+
+  <h2>1. 수집하는 개인정보와 이용 목적</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>항목</th><th>수집 방법</th><th>이용 목적</th></tr>
+    <tr>
+      <td>구글 계정 정보(이름, 이메일 주소, 프로필 사진 URL), Firebase 사용자 식별자(UID)</td>
+      <td>구글 계정으로 로그인할 때 Google·Firebase Authentication을 통해 수집</td>
+      <td>로그인 상태 유지, 도서 검색 중계 서버 이용자 인증(부정 사용 방지)</td>
+    </tr>
+    <tr>
+      <td>도서 검색어, 바코드로 읽은 ISBN</td>
+      <td>도서 검색 시 중계 서버로 전송</td>
+      <td>도서 정보 조회(저장하지 않고 조회 즉시 전달)</td>
+    </tr>
+  </table>
+  </div>
+  <p>앱은 위치, 연락처, 사진·파일, 광고 식별자 등 그 밖의 개인정보를 수집하지 않으며, 광고·분석(Analytics) 도구를 사용하지 않습니다.</p>
+
+  <h2>2. 기기에만 저장되는 정보</h2>
+  <ul>
+    <li>내 서재에 등록한 도서 정보(제목·저자·ISBN·분류 등)와 독서 기록(독서 상태·시작일·종료일·읽은 쪽수)은 <strong>이용자 기기 내부 데이터베이스에만 저장</strong>되며 개발자 서버로 전송되지 않습니다.</li>
+    <li>모바일 데이터 사용 동의 여부, 업데이트 안내 설정 등 앱 설정값도 기기에만 저장됩니다.</li>
+    <li>Android 자동 백업이 켜져 있으면 위 데이터가 이용자 본인의 Google 계정 백업 공간(Google 드라이브)에 백업될 수 있으며, 이는 기기 설정에서 끌 수 있습니다.</li>
+  </ul>
+
+  <h2>3. 개인정보의 처리 위탁 및 제3자 제공</h2>
+  <p>개발자는 이용자의 개인정보를 판매하거나 제3자에게 제공하지 않습니다. 다만 서비스 제공을 위해 아래 서비스를 이용합니다.</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>수탁자</th><th>내용</th><th>전달 정보</th></tr>
+    <tr><td>Google LLC (Firebase Authentication, Cloud Functions)</td><td>로그인 처리, 도서 검색 요청 중계(서울 리전)</td><td>계정 정보, UID, 인증 토큰, 검색어·ISBN</td></tr>
+    <tr><td>Google LLC (Google Play 서비스 코드 스캐너, Play 인앱 업데이트)</td><td>바코드 인식, 앱 업데이트 안내</td><td>카메라 영상은 기기 안에서 처리되며 앱에 저장되지 않음</td></tr>
+    <tr><td>예스이십사(주) (YES24 API)</td><td>도서 정보 검색</td><td>검색어·ISBN(개인 식별 정보 제외)</td></tr>
+    <tr><td>국립중앙도서관, 국회도서관 (공공 API)</td><td>도서 서지·분류 정보, 사서추천도서 조회</td><td>검색어·ISBN(개인 식별 정보 제외)</td></tr>
+  </table>
+  </div>
+  <p>도서 검색 API에는 이용자의 계정 정보가 전달되지 않으며, 중계 서버가 개발자의 인증키만 붙여 요청을 전달합니다. 도서 표지 이미지는 해당 출처 서버에서 직접 불러옵니다. Google의 개인정보 처리는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 따릅니다.</p>
+
+  <h2>4. 보유 및 이용 기간, 파기</h2>
+  <ul>
+    <li>로그인 계정 정보는 회원 탈퇴(계정 삭제) 시까지 Firebase Authentication에 보관되며, 앱에서 계정을 삭제하면 즉시 삭제됩니다.</li>
+    <li>검색어·ISBN은 중계 서버에 저장하지 않습니다. 서버 오류 로그에는 요청 경로와 오류 내용만 남으며 Google Cloud 기본 보관 기간(최대 30일) 후 자동 삭제됩니다.</li>
+    <li>기기에 저장된 독서 기록은 앱을 삭제하거나 앱 데이터를 지우면 즉시 삭제됩니다. 앱 안에서 개별 도서를 삭제할 수도 있습니다.</li>
+  </ul>
+
+  <h2>5. 이용자의 권리와 계정 삭제 방법</h2>
+  <p>이용자는 언제든지 자신의 개인정보 열람·정정·삭제·처리정지를 요청할 수 있습니다.</p>
+  <p><strong>앱에서 계정 삭제:</strong> 앱 상단 오른쪽 더보기(⋮) 메뉴 → <strong>계정 삭제</strong> → 확인 후 구글 계정을 한 번 더 선택하면 바로 삭제됩니다. 이때 Firebase에 저장된 계정 정보와 이 기기에 저장된 내 서재 기록·앱 설정이 모두 삭제되며, 되돌릴 수 없습니다.</p>
+  <p><strong>앱을 이미 삭제했거나 앱을 쓸 수 없는 경우:</strong> 아래 연락처로 로그인에 사용한 구글 계정 이메일을 적어 "계정 삭제 요청"을 보내 주세요. 확인 후 7일 이내에 계정 정보를 삭제하고 결과를 알려 드립니다.</p>
+
+  <h2>6. 아동의 개인정보</h2>
+  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+  <h2>7. 안전성 확보 조치</h2>
+  <ul>
+    <li>모든 통신은 HTTPS로 암호화하며 평문 통신을 허용하지 않습니다.</li>
+    <li>외부 API 인증키는 앱에 포함하지 않고 서버의 Secret Manager에만 보관합니다.</li>
+    <li>중계 서버는 Firebase 인증 토큰을 검증한 요청만 처리하며, 허용된 경로만 전달합니다.</li>
+  </ul>
+
+  <h2>8. 개인정보 보호책임자 및 문의</h2>
+  <ul>
+    <li>개발자: 서환연구소</li>
+    <li>이메일: <a href="mailto:seohwanlab@gmail.com">seohwanlab@gmail.com</a></li>
+  </ul>
+  <p>개인정보 침해에 대한 상담은 개인정보침해신고센터(privacy.kisa.or.kr, 국번 없이 118), 개인정보분쟁조정위원회(www.kopico.go.kr, 1833-6972)에도 문의할 수 있습니다.</p>
+
+  <h2>9. 방침의 변경</h2>
+  <p>이 방침의 내용이 바뀌면 이 페이지를 통해 시행일과 함께 공지합니다.</p>
+
+  <footer>공고일: 2026년 11월 3일 · 시행일: 2026년 11월 3일</footer>
+</main>
+</body>
+</html>
